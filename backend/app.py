@@ -144,7 +144,7 @@ def get_products():
     result = []
     for r in rows:
         item = dict(r)
-        item['image_url'] = f"http://127.0.0.1:5000/uploads/{item['image']}" if item['image'] else None
+        item['image_url'] = f"https://back-h-sr2i.onrender.com//uploads/{item['image']}" if item['image'] else None
         result.append(item)
     return jsonify(result)
 
@@ -222,7 +222,7 @@ def get_product(product_id):
     if not row:
         return jsonify({"error": "Product not found"}), 404
     item = dict(row)
-    item['image_url'] = f"http://127.0.0.1:5000/uploads/{item['image']}" if item['image'] else None
+    item['image_url'] = f"https://back-h-sr2i.onrender.com//uploads/{item['image']}" if item['image'] else None
     return jsonify(item)
 
 
